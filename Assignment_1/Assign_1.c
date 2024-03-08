@@ -7,7 +7,7 @@ int day;
 int month;
 int year;
 
-};
+}D;
 void initDate(struct Date* ptrDate)
 {
 ptrDate->day=0;
@@ -39,30 +39,55 @@ int main()
 {
 int ch;
 
-struct Date d1;
-while((ch=menu())!=0)
-{
-switch (ch)
+// using while loop
+
+// while((ch=menu())!=0)
+// {
+// switch (ch)
+// {
+// case 1:
+// initDate(&D);
+// printf("\n");
+// break;
+// case 2:
+// printDateOnConsole(&D);
+// printf("\n");
+// break;
+
+// case 3:
+// acceptDateFromConsole(&D);
+// printf("\n");
+// break;
+// default:printf("Enter correct choice");
+// printf("\n");
+// break;
+// }
+
+// }
+
+// using do while loop
+
+do{
+    switch (ch)
 {
 case 1:
-initDate(&d1);
+initDate(&D);
 printf("\n");
 break;
 case 2:
-printDateOnConsole(&d1);
+printDateOnConsole(&D);
 printf("\n");
 break;
 
 case 3:
-acceptDateFromConsole(&d1);
+acceptDateFromConsole(&D);
 printf("\n");
 break;
-default:printf("Enter correct choice");
+default:printf("Enter correct choice"); break;
 printf("\n");
 break;
 }
-
-}
+}while((ch=menu())!=0);
 
 return 0;
 }
